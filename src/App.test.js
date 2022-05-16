@@ -5,5 +5,5 @@ import Modify from './components/Modify';
 
 test('Create one task', () => {
     const { result } = renderHook(() => Create('test task','1'));
-    expect(result.current.props.name).toEqual({ name: 'test task' })
+    expect(result.current.props).toEqual({ name: 'test task', duration : '1' })
     })
