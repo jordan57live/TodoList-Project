@@ -15,7 +15,7 @@ const TaskList = ({ tasks, setTasks }) => {
                     <li key={key}>
                         <Task nom={element.name} duree={element.duration} />
                         <Link to={`/modify/${tasks.indexOf(element)}`} style={{ textDecoration: 'none' }}>
-                            <button className='button modify'>Modifier</button>
+                            <button className='button modify'>Editer</button>
                         </Link>
                         <button className='button delete' onClick={() => setTasks(RemoveTask(element.name))}>Supprimer</button>
                     </li>
@@ -25,7 +25,7 @@ const TaskList = ({ tasks, setTasks }) => {
             </ul>
 
             <Link to="/create">
-                <button className='add button'>Ajouter une tâche</button>
+                <button className='add button'>Créer une tâche</button>
             </Link>
         </>
 

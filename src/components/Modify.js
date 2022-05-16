@@ -20,7 +20,7 @@ const Modify = ({ tasks, setTasks }) => {
         <>
             <label for="task-name">Nom de la tâche</label>
             <input type="text" id='task-name' placeholder={tasks[index].name} />
-            <label for="task-duration">Durée de la tâche</label>
+            <label for="task-duration">Durée de la tâche (jour)</label>
             <input type="number" id='task-duration' placeholder={tasks[index].duration} />
             <Link to="/">
                 <button className='button modify' onClick={() => modifyTask(document.getElementById('task-name').value, document.getElementById('task-duration').value)}>Modifier</button>

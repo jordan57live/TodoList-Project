@@ -14,7 +14,7 @@ const Create = ({ tasks, setTasks, taskNumber }) => {
         <>
             <label for="task-name">Nom de la tâche</label>
             <input type="text" id='task-name' />
-            <label for="task-duration">Durée de la tâche</label>
+            <label for="task-duration">Durée de la tâche (jour)</label>
             <input type="number" id='task-duration' />
             <Link to="/">
                 <button className='button add' onClick={() => createTask(document.getElementById('task-name').value, document.getElementById('task-duration').value)}>Créer</button>

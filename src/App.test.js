@@ -1,8 +1,9 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { fireEvent, render, renderHook, screen } from '@testing-library/react';
+import TaskList from './components/TaskList';
+import Create from './components/Create';
+import Modify from './components/Modify';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+test('Create one task', () => {
+    const { result } = renderHook(() => Create('test task','1'));
+    expect(result.current.props.name).toEqual({ name: 'test task' })
+    })

@@ -1,6 +1,6 @@
 const Task = ( {nom, duree} ) => {
     return (
-        <p>{nom} {duree} min</p>    
+        <p>{nom} - {duree} jour(s)</p>    
     );
 }
  
